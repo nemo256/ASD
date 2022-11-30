@@ -26,5 +26,5 @@ $ cc exo.c -o exo.exe             # on windows
 ## Run
 ```
 $ ./exo                           # on unix
-$ (just click on the executable)  # on windows
+$ start exo.exe                   # on windows (or just click on the executable)
 ```
