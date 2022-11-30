@@ -1,5 +1,5 @@
 # ASD1
-Algorothms and Data Structure exercises.
+Algorithms and Data Structure exercises.
 
 ![ASD1](asd1.jpg)
 
