@@ -17,6 +17,14 @@ Algorothms and Data Structure exercises.
 $ git clone https://github.com/nemo256/ASD1
 ```
 
-## Compile
+## Compile (eg: using cc)
+```
+$ cc exo.c -o exo                 # on unix
+$ cc exo.c -o exo.exe             # on windows
+```
 
 ## Run
+```
+$ ./exo                           # on unix
+$ (just click on the executable)  # on windows
+```
