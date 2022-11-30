@@ -1,7 +1,7 @@
 # ASD1
 Algorothms and Data Structure exercises.
 
-[ASD](asd1.jpg)
+![ASD1](asd1.jpg)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
