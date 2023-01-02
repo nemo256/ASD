@@ -1,7 +1,7 @@
 /*
  * Full Name
  * Groupe
- * ID: 12345679
+ * ID: 123456789
  * 
  * Program that searches for a random value (read by the user)
  * in an array (also read by the user) using a dichotomic approach.
