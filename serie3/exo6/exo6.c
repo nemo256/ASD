@@ -1,27 +1,51 @@
 #include <stdio.h>
 
-#define N 6
-
 int
 main() {
-  int T[N] = { 1, 0, 2, -4, 9, 13 }, T2[N + 1], val = 3, valIndex = 2;
+  // Trouver un valeur dans un tableau (Approche dichotomic)
+  int N, val, valIndex;
 
+  // Lire la taille du tableau
+  do {
+    printf("Donner la taille du tableau: ");
+    scanf("%d", &N);
+  } while(N <= 0);
+
+  // Lire val avec sa position (son indice)
+  do {
+    printf("Donner Val et sa position: ");
+    scanf("%d %d", &val, &valIndex);
+  } while(valIndex <= 0 || valIndex >= N);
+
+  // Declaration du tableau
+  int T[N], T2[N + 1];
+
+  // Lecture de tableau
+  printf("Remplir le tableau: \n");
+  for (int i = 0; i < N; i++) {
+    printf("T[%d]: ", i);
+    scanf("%d", &T[i]);
+  }
+
+  // Inserer val dans T2
   for (int i = 0, j = 0; i < N; i++, j++) {
     if (i == valIndex) {
       T2[j++] = val;
       T2[j] = T[i];
-    }
-    else
+    } else {
       T2[j] = T[i];
+    }
   }
 
   printf("T = {");
-  for (int i = 0; i < N; i++)
+  for (int i = 0; i < N; i++) {
     printf(" %d,", T[i]);
+  }
   printf(" }\n");
 
-  printf("T1 = {");
-  for (int i = 0; i < N + 1; i++)
+  printf("T2 = {");
+  for (int i = 0; i < N + 1; i++) {
     printf(" %d,", T2[i]);
+  }
   printf(" }\n");
 }

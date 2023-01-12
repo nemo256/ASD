@@ -8,7 +8,12 @@
 #define SWAP(x, y) { x ^= y; y ^= x; x ^= y; }
 
 int main() {
-  int x = 4, y = 2;
+  // Declaration
+  int x, y;
+
+  // Lire deux nombres
+  printf("Donner deux nombres: ");
+  scanf("%d %d", &x, &y);
 
   printf("Before permutation: x = %d, y = %d\n", x, y);      
   SWAP(x, y);

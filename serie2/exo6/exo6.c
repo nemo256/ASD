@@ -2,7 +2,17 @@
 
 int
 main() {
-  int a = 4, b = 2, remainder = a;
+  // Declaration
+  int a, b;
+
+  // Read two numbers
+  do {
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+  } while(a == 0 || b == 0);
+
+  // Initialize remainder as a
+  int remainder = a;
 
   // Calculating the remainder of a / b
   while (remainder >= b)

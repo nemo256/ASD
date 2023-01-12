@@ -1,10 +1,15 @@
 #include <stdio.h>
 
-#define N 5
-
 int
 main() {
-  int min, number;
+  // Declaration
+  int min, number, N;
+
+  // Read N
+  do {
+    printf("Enter N: ");
+    scanf("%d", &N);
+  } while(N <= 0 || N > 10);
 
   // Finding the minimum of N numbers
   printf("Enter %d numbers: \n", N);
@@ -15,5 +20,6 @@ main() {
       min = number;
   }
 
+  // Display the result
   printf("Min is: %d\n", min);
 }

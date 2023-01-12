@@ -1,15 +1,29 @@
 #include <stdio.h>
 
-#define N 7
-
 int
 main() {
   // Min de N nombres
-  int Tab[] = {1, 9, -4, -5, 3, 2, 7}, min = Tab[0];
+  int N;
 
-  for (int i = 0; i < N; i++)
-    if (min > Tab[i])
+  // Lire la taille du tableau
+  do {
+    printf("Donner la taille du tableau: ");
+    scanf("%d", &N);
+  } while(N <= 0);
+
+  // Declaration
+  int Tab[N], min = Tab[0];
+
+  // Trouver le minimum dans le tableau
+  printf("Remplir le tableau: \n");
+  for (int i = 0; i < N; i++) {
+    printf("Tab[%d]: ", i);
+    scanf("%d", &Tab[i]);
+    if (min > Tab[i]) {
       min = Tab[i];
+    }
+  }
 
+  // Display the result
   printf("Min: %d\n", min);
 }

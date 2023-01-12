@@ -4,10 +4,12 @@ int main() {
   // Declaration
   int a, b, temp;
 
+  // Lire deux nombres
+  printf("Donner deux nombres: ");
+  scanf("%d %d", &a, &b);
+
   // 1er methode
   printf("Using temp: \n");      
-  a = 1;
-  b = 2;
   printf("Before permutation: a = %d, b = %d\n", a, b);      
   temp = a;
   a = b;
@@ -16,8 +18,6 @@ int main() {
 
   // 2eme methode
   printf("Using addition and substraction: \n");      
-  a = 9;
-  b = 5;
   printf("Before permutation: a = %d, b = %d\n", a, b);      
   a = a + b;
   b = a - b;
@@ -26,8 +26,6 @@ int main() {
 
   // 3eme methode
   printf("Using multiplication and division: \n");      
-  a = 13;
-  b = 6;
   printf("Before permutation: a = %d, b = %d\n", a, b);      
   a = a * b;
   b = a / b;

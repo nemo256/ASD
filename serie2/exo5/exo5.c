@@ -3,7 +3,13 @@
 int
 main() {
   // Suppose we want to do (a / b)
-  int a = 4, b = 2, remainder;
+  int a, b, remainder;
+
+  // Read two numbers
+  do {
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+  } while(a == 0 || b == 0);
 
   // Calculating the remainder of a / b
   remainder = a;

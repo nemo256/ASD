@@ -3,13 +3,21 @@
 
 int
 main() {
-  float x = 0.8, result = 0.0;
-  int n = 3;
+  // Declaration
+  float x, result = 0.;
+  int n;
+
+  // Read X and N
+  do {
+    printf("Enter X and N: ");
+    scanf("%f %d", &x, &n);
+  } while(n <= 0);
 
   // Calculating p(x) = x^3 + x^2 + x^1 + 1
-  for (int i = 1; i <= n; i++)
+  for (int i = 0; i <= n; i++) {
     result += pow(x, i);
-  result++;
+  }
 
+  // Display the result
   printf("p(%.2f) = %.2f\n", x, result);
 }
