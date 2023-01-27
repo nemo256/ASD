@@ -37,4 +37,5 @@ int main (int argc, char *argv[]) {
   } else {
     printf("%s and %s are not anagram.\n", str1, str2);
   }
+  return 0;
 }
