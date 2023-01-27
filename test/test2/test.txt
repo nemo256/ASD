@@ -1,0 +1,133 @@
+Exercice 1 (Algo / C) (8pts):
+  Écrire un algorithme / programme C qui lit une séquence de N nombres. puis, calculez la moyenne des nombres pairs et des nombres impairs séparément.
+
+  e.g:
+    Pour N = 8 nombres { 10, 2, 5, 6, 5, 5, 2, 5 }
+    Resultat = 5
+
+  Consigne a respecter:
+    - N doit être >= 5.
+    - Si MoyPair et MoyImpair sont équivalents, afficher la moyenne,
+    - Sinon afficher un message d'erreur.
+
+Exercice 2 (C) (10pts):
+  Ecrire un programme C qui :
+    - Lit un tableau T.   (4pts)
+    - Affiche le nombre d'apparitions une valeur VAL dans T. (3pts)
+    - Supprime les doublons (sans utiliser un autre tableau). (3pts)
+
+  e.g:
+    Pour T[5] = { 1, 0, 1, 7, 6 }
+    Resultat:
+      1. Nombre d'occurence de 1 est 2.
+      2. T[4] = { 1, 0, 7, 6 }
+
+  Consigne a respecter:
+    - La taille du tableau doit être >= 5.
+
+Solution:
+
+Exercice 1: (Algo / C) (8pts)
+#include <stdio.h>
+
+int main () {
+  // Declaration (1pts)
+  int N, num, moyPair, moyImpair, pair, impair;
+
+  // Initialisation (1pts)
+  moyPair = 0;
+  moyImpair = 0;
+  pair = 0;
+  impair = 0;
+
+  // Le cas ou N >= 5 (1pts)
+  // Syntaxe do {} while(); (0.25pts)
+  do {
+    printf("Donner N: ");
+    scanf("%d", &N); // (%d 0.25pts, &N 0.25pts)
+  } while(N < 5); // (0.25pts)
+
+  // Lecture et Calcule (3pts)
+  for (int i = 0; i < N; i++) { // (0.5pts)
+    printf("Donner un nombre: ");
+    scanf("%d", &num); // (%d 0.25pts, &num 0.25pts)
+    if (num % 2 == 0) { // (0.5pts)
+      moyPair += num; // (0.25pts)
+      pair++; // (0.25pts)
+    } else { // (0.5pts)
+      moyImpair += num; // (0.25pts)
+      impair++; // (0.25pts)
+    }
+  }
+
+  // Calcule des moyennes (1pts)
+  moyPair = moyPair / pair; // (0.5pts)
+  moyImpair = moyImpair / impair; // (0.5pts)
+
+  // Affichage de resultat (1pts)
+  if (moyPair == moyImpair) { // (0.25pts)
+    printf("La moyenne est: %d\n", moyPair); // (0.25pts)
+  } else { // (0.25pts)
+    printf("Erreur!\n"); // (0.25pts)
+  }
+}
+
+Exercice 2: (C) (10pts)
+#include <stdio.h>
+
+int main () {
+  // Declaration (0.5pts)
+  int N, val, occurence;
+
+  // Initialisation (0.5pts)
+  occurence = 0;
+
+  // Le cas ou N >= 5 (1pts)
+  // Syntaxe do {} while(); (0.25pts)
+  do {
+    printf("Donner N: ");
+    scanf("%d", &N); // (%d 0.25pts, &N 0.25 pts)
+  } while(N < 5); // (0.25pts)
+
+  // Lecture d'une valeur (0.5pts)
+  printf("Donner une valeur: ");
+  scanf("%d", &val); // (%d 0.25pts, &val 0.25pts)
+  
+  int T[N];
+
+  // Lecture du tableau (1.5pts)
+  for (int i = 0; i < N; i++) { // (0.75pts)
+    printf("Donner T[%d]: ", i);
+    scanf("%d", &T[i]); // (%d 0.5pts, &T[i] 0.5pts)
+  }
+
+  // Nombre d'apparition de val dans T (1.5pts)
+  for (int i = 0; i < N; i++) { // (0.75pts)
+    if (T[i] == val) { // (0.5pts)
+      occurence++; // (0.5pts)
+    }
+  }
+
+  // Supprimer les doublants (3pts)
+  for (int i = 0; i < N - 1; i++) {
+    for (int j = i + 1; j < N - 1; j++) {
+      if (T[i] == T[j]) {
+        for (int k = j; k < N - 1; k++) {
+          T[k] = T[k + 1];
+        }
+        N--;
+        j--;
+      }  
+    }
+  }
+
+  // Affichage de nombre d'occurence (0.5pts)
+  printf("Nombre d'occurence de %d dans T est: %d foix\n", val, occurence);
+
+  // Affichage du T (1pts)
+  printf("T = {");
+  for (int i = 0; i < N; i++) {
+    printf(" %d,", T[i]);
+  }
+  printf(" }\n");
+}

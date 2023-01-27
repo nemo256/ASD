@@ -1,0 +1,41 @@
+Exercice 1:
+  Ecrire un algorithme qui lit un rayon (R) et calcule la surface dune cercle:
+    S = R^2 * PI
+
+Exercice 2:
+  Ecrire un algorithme qui demande un nombre, puis affiche si le nombre est negative, positive ou nul.
+
+Solution:
+
+Exercice 1: (C) (6pts)
+#include <stdio.h>
+
+int
+main() {
+  float R, S;                   // Declaration (1pts)
+
+  printf("Donner R: ");
+  scanf("%f", &R);              // Lecture de R (2pts = 1pts "%f" et 1pts &R)
+
+  S = R * R * 3.14;             // Calcule (2pts)
+
+  printf("S = %f\n", S);        // Affichage de resultat (1pts)
+}
+
+Exercice 2: (Algo / C) (9pts)
+#include <stdio.h>
+
+int
+main() {
+  int nombre;                   // Declaration (1pts)
+
+  printf("Donner un nombre: ");
+  scanf("%d", &nombre);         // Lecture de nombre (2pts = 1pts "%d" et 1pts &nombre)
+
+  if (nombre < 0)               // Condition (1pts)
+    printf("Negative\n");       // Affichage (1pts)
+  else if (nombre > 0)          // Condition (1pts)
+    printf("Positive\n");       // Affichage (1pts)
+  else                          // Condition (1pts)
+    printf("Zero\n");           // Affichage (1pts)
+}
