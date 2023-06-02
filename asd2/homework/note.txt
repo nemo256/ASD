@@ -1,0 +1,22 @@
+Code -> 
+  1- Functionalities (2pts)
+      | Create (.5pts)
+      | Read (.5pts)
+      | Update (.5pts)
+      | Delete (.5pts)
+
+  2- File I/O implemetation (1pts)
+      | Database folder (.5pts)
+      | Name_firstName.txt (.5pts)
+
+  3- Search (.5pts)
+
+  4- External features (4.5pts)
+      | User Interface (1.5pts) (+1pts for using external libraries)
+      | Form validation (2pts)
+      | Documentation (.5pts)
+      | English (.5pts)
+
+Report ->
+  | Description (2pts)
+  | Explanation of functions with screenshots (3pts)
